@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 440" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#161b22" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#0d1117" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#05070a" stop-opacity="1"/>
+    </radialGradient>
+
+    <!-- Neon Tier Gradients -->
+    <linearGradient id="tier1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0077ff" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <linearGradient id="tier2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d946ef" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <linearGradient id="tier3Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0.7"/>
+    </linearGradient>
+
+    <!-- Flow Line Glows -->
+    <linearGradient id="railGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+
+    <!-- Drop Shadows and Filters -->
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="glowPurple" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="glowGold" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes floatMid {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-12px); }
+      }
+      @keyframes floatFast {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-16px); }
+      }
+      @keyframes pulseBeam {
+        0% { stroke-dashoffset: 240; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes orbPulse {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.9; transform: scale(1.15); }
+      }
+      @keyframes rotateCube {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .floating-tier-1 { animation: floatSlow 5s ease-in-out infinite; }
+      .floating-tier-2 { animation: floatMid 4.5s ease-in-out infinite 0.8s; }
+      .floating-tier-3 { animation: floatFast 4s ease-in-out infinite 1.5s; }
+
+      .beam-line {
+        stroke-dasharray: 12 18;
+        animation: pulseBeam 4s linear infinite;
+      }
+
+      .glow-orb {
+        animation: orbPulse 3s ease-in-out infinite alternate;
+        transform-origin: center;
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="920" height="440" rx="16" fill="url(#bgGlow)"/>
+  <rect width="918" height="438" x="1" y="1" rx="15" fill="none" stroke="#30363d" stroke-width="1.2" opacity="0.6"/>
+
+  <!-- Subtle Perspective Grid Lines -->
+  <g stroke="#21262d" stroke-width="1" opacity="0.45">
+    <line x1="60" y1="360" x2="860" y2="360"/>
+    <line x1="60" y1="310" x2="860" y2="310"/>
+    <line x1="60" y1="260" x2="860" y2="260"/>
+    <line x1="160" y1="200" x2="60" y2="400"/>
+    <line x1="360" y1="200" x2="260" y2="400"/>
+    <line x1="560" y1="200" x2="460" y2="400"/>
+    <line x1="760" y1="200" x2="660" y2="400"/>
+  </g>
+
+  <!-- Top Header Title Area inside SVG -->
+  <g transform="translate(460, 45)" text-anchor="middle">
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#58a6ff" letter-spacing="2.5">
+      CONTINUOUS SYSTEM MASTERY PIPELINE
+    </text>
+    <text y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" font-weight="800" fill="#f0f6fc">
+      3D Engineering Progression Track
+    </text>
+  </g>
+
+  <!-- Flow Rails Connecting the 3D Tier Platforms -->
+  <path d="M 230 250 L 460 195 L 690 145" fill="none" stroke="#21262d" stroke-width="4"/>
+  <path d="M 230 250 L 460 195 L 690 145" fill="none" stroke="url(#railGlow)" stroke-width="2.5" class="beam-line"/>
+
+  <!-- ============================================================== -->
+  <!-- TIER 1: BEGINNER (Foundations & Mechanics) -->
+  <!-- ============================================================== -->
+  <g class="floating-tier-1" transform="translate(0, 0)">
+    <!-- Connection Glow Pillar -->
+    <ellipse cx="230" cy="350" rx="90" ry="25" fill="#00f0ff" opacity="0.08" class="glow-orb"/>
+    <line x1="230" y1="260" x2="230" y2="340" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.4"/>
+
+    <!-- 3D Isometric Platform (Isometric Diamond & Extrusion) -->
+    <!-- Extrusion Base (3D Depth) -->
+    <path d="M 140 250 L 230 295 L 320 250 L 320 268 L 230 313 L 140 268 Z" fill="#06324a" opacity="0.9"/>
+    <!-- Top Face -->
+    <path d="M 140 250 L 230 205 L 320 250 L 230 295 Z" fill="url(#tier1Grad)" filter="url(#glowCyan)"/>
+    <path d="M 140 250 L 230 205 L 320 250 L 230 295 Z" fill="#091829" opacity="0.45"/>
+    <path d="M 140 250 L 230 205 L 320 250 L 230 295 Z" fill="none" stroke="#00f0ff" stroke-width="2"/>
+
+    <!-- Inner Core Isometric Diamond -->
+    <path d="M 180 250 L 230 225 L 280 250 L 230 275 Z" fill="#00f0ff" opacity="0.25"/>
+
+    <!-- Floating 3D Micro Cube on Tier 1 -->
+    <g transform="translate(230, 220)">
+      <polygon points="0,-18 14,-10 0,-2 -14,-10" fill="#38bdf8"/>
+      <polygon points="-14,-10 0,-2 0,14 -14,6" fill="#0284c7"/>
+      <polygon points="0,-2 14,-10 14,6 0,14" fill="#0369a1"/>
+    </g>
+
+    <!-- Labels for Tier 1 -->
+    <g transform="translate(230, 335)" text-anchor="middle">
+      <rect x="-65" y="-12" width="130" height="24" rx="12" fill="#091b2c" stroke="#00f0ff" stroke-width="1"/>
+      <text y="4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#38bdf8">
+        STAGE 1: FOUNDATION
+      </text>
+      <text y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#f0f6fc">
+        Beginner (B1 → B3)
+      </text>
+      <text y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500" fill="#8b949e">
+        Variables • Call Stack • Git Trees • Queries
+      </text>
+    </g>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- TIER 2: INTERMEDIATE (Systems & Integration) -->
+  <!-- ============================================================== -->
+  <g class="floating-tier-2" transform="translate(0, 0)">
+    <!-- Connection Glow Pillar -->
+    <ellipse cx="460" cy="305" rx="90" ry="25" fill="#a855f7" opacity="0.08" class="glow-orb"/>
+    <line x1="460" y1="205" x2="460" y2="295" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.4"/>
+
+    <!-- 3D Isometric Platform -->
+    <!-- Extrusion Base -->
+    <path d="M 370 195 L 460 240 L 550 195 L 550 215 L 460 260 L 370 215 Z" fill="#36104f" opacity="0.9"/>
+    <!-- Top Face -->
+    <path d="M 370 195 L 460 150 L 550 195 L 460 240 Z" fill="url(#tier2Grad)" filter="url(#glowPurple)"/>
+    <path d="M 370 195 L 460 150 L 550 195 L 460 240 Z" fill="#1b0c2a" opacity="0.45"/>
+    <path d="M 370 195 L 460 150 L 550 195 L 460 240 Z" fill="none" stroke="#d946ef" stroke-width="2"/>
+
+    <!-- Inner Core Isometric Diamond -->
+    <path d="M 410 195 L 460 170 L 510 195 L 460 220 Z" fill="#d946ef" opacity="0.25"/>
+
+    <!-- Floating 3D Micro Cube on Tier 2 -->
+    <g transform="translate(460, 165)">
+      <polygon points="0,-18 14,-10 0,-2 -14,-10" fill="#e879f9"/>
+      <polygon points="-14,-10 0,-2 0,14 -14,6" fill="#c026d3"/>
+      <polygon points="0,-2 14,-10 14,6 0,14" fill="#9333ea"/>
+    </g>
+
+    <!-- Labels for Tier 2 -->
+    <g transform="translate(460, 280)" text-anchor="middle">
+      <rect x="-70" y="-12" width="140" height="24" rx="12" fill="#200d33" stroke="#d946ef" stroke-width="1"/>
+      <text y="4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#e879f9">
+        STAGE 2: INTEGRATION
+      </text>
+      <text y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#f0f6fc">
+        Intermediate (I1 → I3)
+      </text>
+      <text y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500" fill="#8b949e">
+        TCP/IP • Indexing • Docker • Linux Pipes
+      </text>
+    </g>
+  </g>
+
+  <!-- ============================================================== -->
+  <!-- TIER 3: ADVANCED (Distributed Systems & Scale) -->
+  <!-- ============================================================== -->
+  <g class="floating-tier-3" transform="translate(0, 0)">
+    <!-- Connection Glow Pillar -->
+    <ellipse cx="690" cy="255" rx="90" ry="25" fill="#f59e0b" opacity="0.08" class="glow-orb"/>
+    <line x1="690" y1="155" x2="690" y2="245" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="3 3" opacity="0.4"/>
+
+    <!-- 3D Isometric Platform -->
+    <!-- Extrusion Base -->
+    <path d="M 600 145 L 690 190 L 780 145 L 780 167 L 690 212 L 600 167 Z" fill="#4d2c00" opacity="0.9"/>
+    <!-- Top Face -->
+    <path d="M 600 145 L 690 100 L 780 145 L 690 190 Z" fill="url(#tier3Grad)" filter="url(#glowGold)"/>
+    <path d="M 600 145 L 690 100 L 780 145 L 690 190 Z" fill="#241400" opacity="0.4"/>
+    <path d="M 600 145 L 690 100 L 780 145 L 690 190 Z" fill="none" stroke="#fbbf24" stroke-width="2"/>
+
+    <!-- Inner Core Isometric Diamond -->
+    <path d="M 640 145 L 690 120 L 740 145 L 690 170 Z" fill="#fbbf24" opacity="0.25"/>
+
+    <!-- Floating 3D Micro Cube on Tier 3 -->
+    <g transform="translate(690, 115)">
+      <polygon points="0,-18 14,-10 0,-2 -14,-10" fill="#fde047"/>
+      <polygon points="-14,-10 0,-2 0,14 -14,6" fill="#f59e0b"/>
+      <polygon points="0,-2 14,-10 14,6 0,14" fill="#d97706"/>
+    </g>
+
+    <!-- Labels for Tier 3 -->
+    <g transform="translate(690, 230)" text-anchor="middle">
+      <rect x="-65" y="-12" width="130" height="24" rx="12" fill="#291802" stroke="#fbbf24" stroke-width="1"/>
+      <text y="4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#fde047">
+        STAGE 3: ARCHITECTURE
+      </text>
+      <text y="28" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#f0f6fc">
+        Advanced (A1 → A3)
+      </text>
+      <text y="46" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500" fill="#8b949e">
+        MVCC • Sharding • Cryptography • Microservices
+      </text>
+    </g>
+  </g>
+
+  <!-- Bottom Metric Badge -->
+  <g transform="translate(460, 405)" text-anchor="middle">
+    <rect x="-190" y="-12" width="380" height="24" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <circle cx="-165" cy="0" r="4" fill="#22c55e"/>
+    <text x="5" y="4" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#c9d1d9">
+      Curriculum Status: Active Progression • Category Rotation Active
+    </text>
+  </g>
+</svg>
